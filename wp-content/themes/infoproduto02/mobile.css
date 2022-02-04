@@ -1,0 +1,93 @@
+/****Responsivo da página****/
+
+@media screen and (max-width: 992px) {
+    .title-01 h1,
+    .title-01 h2,
+    .title-01 h3,
+    .wq-06 .conteudo h2 {
+        font-size: 25px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .btn {
+        font-size: 15px;
+        padding: 15px 30px;
+    }
+    .wq-01 figure img {
+        margin-left: 0px;
+    }
+    .wq-06 figure img {
+        position: relative;
+    }
+}
+
+
+/***** Tamanho para smartphones na vertical *****/
+
+@media screen and (max-width: 576px) {
+    .banner .wrapper {
+        grid-template-columns: 1fr;
+    }
+    .selos-de-compra img {
+        width: 100%;
+        height: auto;
+    }
+    .wq-07 .conteudo-esq .wrapper {
+        grid-template-columns: 1fr;
+    }
+    .footer-top .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/***** Tamanho para smartphones na horizontal *****/
+
+@media screen and (max-width: 768px) and (min-width: 577px) {
+    .banner .wrapper {
+        grid-template-columns: 1fr;
+    }
+    .footer-top .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/***** Tamanho para tablets na vertical *****/
+
+@media screen and (max-width: 1099px) and (min-width: 769px) {
+    .footer-top .wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+/***** Tamanho para tablets na horizontal *****/
+
+@media screen and (max-width: 1200px) and (min-width: 1100px) {}
+
+
+/***** Monitores pequenos  *****/
+
+@media screen and (max-width: 1299px) and (min-width: 992px) {}
+
+
+/***** Monitores medios  *****/
+
+@media screen and (max-width: 1499px) and (min-width: 1300px) {}
+
+
+/***** Monitores extra grandes  *****/
+
+@media screen and (max-width: 1699px) and (min-width: 1500px) {}
+
+
+/***** Monitores extra grandes  *****/
+
+@media screen and (max-width: 2500px) and (min-width: 1920px) {}
+
+@media screen and (max-width: 3000px) and (min-width: 2500px) {}
+
+
+/****Responsivo da página****/
