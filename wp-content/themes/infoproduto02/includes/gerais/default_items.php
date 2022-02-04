@@ -29,24 +29,6 @@
 								);
 			$postRecordID = wp_insert_post($dataToInsert);
 		}
-		if(!get_page_by_path( 'configuracoes-de-e-mail', OBJECT, 'gerais' )){
-			$dataToInsert = array(
-									'post_title'	=> 'Configurações de E-mail',
-									'post_name'		=> 'configuracoes-de-e-mail',
-									'post_status'	=> 'publish',
-									'post_type'		=> 'gerais'
-								);
-			$postRecordID = wp_insert_post($dataToInsert);
-		}
-		if(!get_page_by_path( 'configuracoes-do-disqus', OBJECT, 'gerais' )){
-			$dataToInsert = array(
-									'post_title'	=> 'Configurações do Disqus',
-									'post_name'		=> 'configuracoes-do-disqus',
-									'post_status'	=> 'publish',
-									'post_type'		=> 'gerais'
-								);
-			$postRecordID = wp_insert_post($dataToInsert);
-		}
 	}
 	// Hooking up our function to theme setup
 	add_action( 'init', 'create_posttype_gerais' );

@@ -1,43 +1,52 @@
 <?php get_header();
     $id_page = get_page_by_path( 'home', OBJECT, 'page' )->ID;
 ?>
-    <section class="banner">
-        <div class="container">
-            <div class="cto">
-                <div class="title-01">
-                    <h1><span>INOVAÇÃO E POTÊNCIA PARA</span> FACILITAR SEU PROCESSO DE EMAGRECIMENTO</h1>
-                    <p><strong>Lift Detox</strong> Caps possui fórmula 100% natural que contém ingredientes potentes capazes de agilizar o processo de emagrecimento, sem precisar sair de casa para academia</p>
+
+    <?php if(get_post_meta( $id_page, 'wsg_banner_show', true )){ ?>
+        <section class="banner">
+            <div class="container">
+                <div class="cto">
+                    <div class="title-01">
+                        <?php echo wpautop(get_post_meta( $id_page, 'wsg_banner_titulo_destaque', true )); ?>
+                        <?php echo wpautop(get_post_meta( $id_page, 'wsg_banner_descricao', true )); ?>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <ul>
+                        <?php $banner_esq_items = get_post_meta( $id_page, "banner_esq_items", true );
+                            if( $banner_esq_items ){
+                                foreach( $banner_esq_items as $key => $entry ){ ?>
+                                <li>
+                                    <div><?php echo wpautop($entry['wsg_banner_esq_items_texto']); ?> <span><?php getImageThumb( $entry['wsg_banner_esq_items_img_id'], "30x30"); ?></span>
+                                </li>
+                        <?php }} ?>
+                    </ul>
+
+                    <figure><?php getImageThumb( get_post_meta( $id_page, 'wsg_banner_img_id', true ), "555x568"); ?></figure>
+
+                    <ul>
+                        <?php $banner_dir_items = get_post_meta( $id_page, "banner_dir_items", true );
+                            if( $banner_dir_items ){
+                                foreach( $banner_dir_items as $key => $entry ){ ?>
+                                <li>
+                                    <div><?php echo wpautop($entry['wsg_banner_dir_items_texto']); ?> <span><?php getImageThumb( $entry['wsg_banner_dir_items_img_id'], "30x30"); ?></span>
+                                </li>
+                        <?php }} ?>
+                    </ul>
+                </div>
+
+                <div class="cto">
+                    <?php if($wsg_banner_btn_texto = get_post_meta( $id_page, 'wsg_banner_btn_texto', true )){ ?>
+                        <a href="<?php echo get_post_meta( $id_page, 'wsg_banner_btn_link', true ); ?>" class="btn"> <?php echo $wsg_banner_btn_texto; ?></a>
+                    <?php } ?>
+                    <figure class="selos-de-compra">
+                        <?php getImageThumb( get_post_meta( $id_page, 'wsg_banner_selos_seguranca_img_id', true ), "300x43"); ?>
+                    </figure>
                 </div>
             </div>
-            <div class="wrapper">
-                <ul>
-                    <li>
-                        <div><strong>Reduz</strong> a vontade De comer</div> <span><img src="img/hamburguer.png" alt="" title=""></span></li>
-                    <li>
-                        <div><strong>Combate</strong> as Estrias e celulite </div><span><img src="img/dna-structure.png" alt="" title=""></span></li>
-                    <li>
-                        <div><strong>Promove melhorias</strong> na sua saúde</div> <span><img src="img/like.png" alt="" title=""></span></li>
-                </ul>
+        </section>
+    <?php } ?>
 
-                <figure><img src="img/lift-detox-caps.png" alt="" title=""></figure>
-
-                <ul>
-                    <li>
-                        <div><strong>Saudável</strong> e 100% natural</div> <span><img src="img/apple.png" alt="" title=""></span></li>
-                    <li>
-                        <div><strong>Queima</strong> gordura localizada</div> <span><img src="img/fire.png" alt="" title=""></span></li>
-                    <li>
-                        <div><strong>Acelera </strong> o metabolismo</div><span><img src="img/speedometer.png" alt="" title=""></span></li>
-                </ul>
-            </div>
-            <div class="cto">
-                <a href="#" class="btn"> EXPERIMENTE AGORA!</a>
-                <figure class="selos-de-compra">
-                    <img src="img/selos-de-compra.png" alt="" title="">
-                </figure>
-            </div>
-        </div>
-    </section>
 
     <section class="wq-01">
         <div class="container">

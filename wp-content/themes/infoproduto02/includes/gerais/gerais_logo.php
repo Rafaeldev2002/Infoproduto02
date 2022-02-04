@@ -20,28 +20,6 @@
 			return;
 		}
 
-		// Metabox logo header
-		$logo_header = new_cmb2_box( array(
-			'id'            => 'logo_header',
-			'title'         => __( 'Logo do Cabeçalho' ),
-			'object_types'  => array( 'gerais', ),
-			'context'       => 'normal',
-			'priority'      => 'high',
-			'show_names'    => true,
-		) );
-
-		$logo_header->add_field( array(
-			'name'       => __( 'Insira a imagem aqui' ),
-			'id'         => 'wsg_logo_header_img',
-			'type'       => 'file',
-			'query_args' => array(
-				'type' => array(
-					'image',
-				),
-			),
-			'preview_size' => 'medium',
-		) );
-
 		// Metabox logo footer
 		$logo_footer = new_cmb2_box( array(
 			'id'            => 'logo_footer',
