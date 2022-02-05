@@ -8,6 +8,8 @@
 		add_image_size( '1920x420', 1920, 420, true );
 		add_image_size( '555x568', 555, 568, true );
 		add_image_size( '300x43', 300, 43, true );
+		add_image_size( '255x255', 255, 255, true );
+		add_image_size( '225x176', 225, 176, true );
 		add_image_size( '165x63', 165, 63, true );
 		add_image_size( '64x64', 64, 64, true );
 	}

@@ -48,273 +48,155 @@
     <?php } ?>
 
 
-    <section class="wq-01">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
-                    <div class="conteudo">
-                        <div class="title-01">
-                            <h2>EFEITO BARIÁTRICA NATURAL <span>EM CÁPSULAS</span></h2>
-                            <hr>
-                        </div>
-                        <p>Ao total foram 8 anos de pesquisa e estudos para encontrar a tecnologia e a medida certa para desenvolver Lift Detox Caps.</p>
-                        <p>Pensado para quem deseja emagrecer de maneira definitiva e livre do efeito sanfona, Lift Detox Caps já conquistou o mundo e foi aprovado em mais de 17 países como a verdadeira fórmula para emagrecer com saúde e sem sofrimento.</p>
-                        <p>Lift Detox Caps funciona como uma cirurgia de emagrecimento. <strong>A combinação exclusiva dentro das cápsulas formam uma espécie de gel que proporciona uma poderosa ação inibidora de apetite, permitindo o emagrecimento rápido e saudável.</strong></p>
-                        <p>Se você deseja;</p>
-                        <ul>
-                            <li>Emagrecer da maneira rápida e natural</li>
-                            <li>Com ativos 100% naturais e livre de efeitos colaterais</li>
-                            <li>Finalmente usar as roupas que sempre quis</li>
-                            <li>Reconquistar sua autoestima e qualidade</li>
-                        </ul>
-                        <h4>EXPERIMENTE AGORA E DESFRUTE DE TODOS OS BENEFÍCIOS</h4>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                    <figure>
-                        <img src="img/peso.png" alt="" title="">
-                    </figure>
-                    <div class="cto">
-                        <a href="#" class="btn"> EXPERIMENTE AGORA!</a>
-                        <figure class="selos-de-compra">
-                            <img src="img/selos-de-compra.png" alt="" title="">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="wq-02">
-        <div class="container">
-            <div class="cto">
-                <div class="title-01">
-                    <h2>DESCUBRA O QUE NOSSAS CÁPSULAS <span>PODEM FAZER POR VOCÊ</span></h2>
-                    <p> <strong>Lift Detox Caps</strong> Com sua fórmula avançada, Lift Detox Caps queima gordura de forma acelerada, proporcionando um emagrecimento rápido e definitivo em poucas semanas.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-02-item">
-                        <figure><img src="img/bn1.png" alt="" title=""></figure>
-                        <h3>ACELERA O METABOLISMO</h3>
-                        <p>O metabolismo acelerado faz com que a pessoa queime as calorias mais rapidamente, concentrando menos gorduras, de forma que fica mais difícil ganhar peso.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-02-item">
-                        <figure><img src="img/bn2.png" alt="" title=""></figure>
-                        <h3>DIMINUI O APETITE</h3>
-                        <p>Os ativos presentes em seus compostos diminuem o apetite e reduzem a absorção de açúcares e gorduras no organismo.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-02-item">
-                        <figure><img src="img/bn3.png" alt="" title=""></figure>
-                        <h3>REGULA O INTESTINO</h3>
-                        <p>Por ser composto por diversas fibras inteligentes, seu intestino começará a trabalhar de forma correta. Ajuda quem sofre com intestino preguiçoso.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-02-item">
-                        <figure><img src="img/bn4.png" alt="" title=""></figure>
-                        <h3>EFEITO BARRIGA CHAPADA</h3>
-                        <p>Por acelerar o metabolismo e queimar a gordura localizada, reduz drasticamente a gordura abdominal.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="wq-03">
-        <div class="container">
-            <div class="title-01 cto">
-                <h2><span>CONHEÇA O SEGREDO DA</span> FÓRMULA DE LIFT DETOX CAPS</h2>
-                <hr>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="wq-03-item">
-                        <figure><img src="img/f1.png" alt="" title=""></figure>
-                        <h3>SPIRULINA</h3>
-                        <p>Fonte de energia, vitamina e minerais a spirulina auxilia no fortalecimento do sistema imunológico, controla a pressão e o colesterol e melhora a performance muscular.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="wq-03-item">
-                        <figure><img src="img/f2.png" alt="" title=""></figure>
-                        <h3>VITAMINA E</h3>
-                        <p>Efeito antioxidante poderoso a vitamina E é um dos segredos para cuidar do colesterol e gordura do fígado já que a mesma é responsável por eliminar as gorduras.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="wq-03-item">
-                        <figure><img src="img/f3.png" alt="" title=""></figure>
-                        <h3>GUARANÁ</h3>
-                        <p>Rico em energia e extraído diretamente da Amazônia ele auxilia o organismo a expulsar a gordura e age como um combustível para o corpo, fornecendo muito mais energia e disposição para o dia-a-dia.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="wq-03-item">
-                        <figure><img src="img/f4.png" alt="" title=""></figure>
-                        <h3>CROMO</h3>
-                        <p>Age diretamente como um poderoso inibidor de apetite, trazendo saciedade e rápidos resultados na balança.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="wq-03-item">
-                        <figure><img src="img/f5.png" alt="" title=""></figure>
-                        <h3>QUITOSANA</h3>
-                        <p>Remédio Natural responsável por eliminar a gordura do corpo e regular o trânsito intestinal.</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="wq-03-item">
-                        <figure><img src="img/f6.png" alt="" title=""></figure>
-                        <h3>PSYLLIUM</h3>
-                        <p>Rico em fibra o psyllium auxilia na perda de peso, no controle do colesterol e na redução da pressão arterial.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="wq-04">
-        <div class="container">
-            <div class="title-01 cto">
-                <h2>FAÇA A ESCOLHA DO KIT IDEAL PARA VOCÊ!</h2>
-                <h5>RECOMENDAMOS O TRATAMENTO DE 3 A 5 MESES PARA MELHORES RESULTADOS</h5>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-04-item">
-                        <div class="wq-04-item-header">
-                            <h2>COMPRE 1 POTE</h2>
-                            <h3>TRATAMENTO PARA 1 MÊS</h3>
-                        </div>
-                        <figure>
-                            <img src="img/kit1.png" alt="" title="">
-                            <figcaption>
-                                <h5>45%</h5>
-                                <h6>OFF</h6>
-                            </figcaption>
-                        </figure>
-                        <div class="valor">
-                            <p>DE <span>R$177,00</span></p>
-                            <p>Por Apenas <strong>12x</strong></p>
-                            <div>
-                                <span class="medio">R$</span>
-                                <span class="grande">9</span>
-                                <span class="medio">,74</span>
+    <?php if(get_post_meta( $id_page, 'wsg_introducao_show', true )){ ?>
+        <section class="wq-01">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                        <div class="conteudo">
+                            <div class="title-01">
+                                <?php echo wpautop(get_post_meta( $id_page, 'wsg_introducao_titulo', true )); ?>
+                                <hr>
                             </div>
+                            <?php echo wpautop(get_post_meta( $id_page, 'wsg_introducao_texto', true )); ?>
+                            
+                            <?php $wsg_introducao_checklist = get_post_meta( $id_page, "wsg_introducao_checklist", true );
+                                if( $wsg_introducao_checklist ){ ?>
+                                <ul>
+                                    <?php foreach( $wsg_introducao_checklist as $key => $entry ){ ?>
+                                    <li><?php echo $entry; ?></li>
+                                    <?php } ?>
+                                </ul>
+                            <?php } ?>
+                            <?php echo wpautop(get_post_meta( $id_page, 'wsg_introducao_texto_pos_checklist', true )); ?>
                         </div>
-                        <span class="avista">Ou <strong>R$97,00</strong> à Vísta</span>
-                        <div class="cto">
-                            <a href="#" class="btn">COMPRAR AGORA!</a>
-                        </div>
-                        <p class="frete">
-                            <img src="img/entrega.png" alt=" icon frete"> FRETE GRATIS PARA TODO BRASIL
-                        </p>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-04-item">
-                        <div class="wq-04-item-header">
-                            <h2>COMPRE 2 POTES</h2>
-                            <h3>TRATAMENTO PARA 2 MÊSES</h3>
-                        </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
                         <figure>
-                            <img src="img/kit2.png" alt="" title="">
-                            <figcaption>
-                                <h5>20%</h5>
-                                <h6>OFF</h6>
-                            </figcaption>
+                            <?php getImageThumb( get_post_meta( $id_page, 'wsg_introducao_img_id', true ), "445x734"); ?>
                         </figure>
-                        <div class="valor">
-                            <p>DE <span>R$194,00</span></p>
-                            <p>Por Apenas <strong>12x</strong></p>
-                            <div>
-                                <span class="medio">R$</span>
-                                <span class="grande">15</span>
-                                <span class="medio">,76</span>
-                            </div>
-                        </div>
-                        <span class="avista">Ou <strong>R$157,00</strong> à Vísta</span>
                         <div class="cto">
-                            <a href="#" class="btn">COMPRAR AGORA!</a>
+                            <?php if($wsg_introducao_btn_texto = get_post_meta( $id_page, 'wsg_introducao_btn_texto', true )){ ?>
+                                <a href="<?php echo get_post_meta( $id_page, 'wsg_introducao_btn_link', true ); ?>" class="btn"> <?php echo $wsg_introducao_btn_texto; ?></a>
+                            <?php } ?>
+                            <figure class="selos-de-compra">
+                                <?php getImageThumb( get_post_meta( $id_page, 'wsg_introducao_selos_seguranca_img_id', true ), "300x43"); ?>
+                            </figure>
                         </div>
-                        <p class="frete">
-                            <img src="img/entrega.png" alt=" icon frete"> FRETE GRATIS PARA TODO BRASIL
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-04-item">
-                        <div class="wq-04-item-header">
-                            <h2>COMPRE 3 POTES</h2>
-                            <h3>TRATAMENTO PARA 3 MÊSES</h3>
-                        </div>
-                        <figure>
-                            <img src="img/kit3.png" alt="" title="">
-                            <figcaption>
-                                <h5>23%</h5>
-                                <h6>OFF</h6>
-                            </figcaption>
-                        </figure>
-                        <div class="valor">
-                            <p>DE <span>R$297,00</span></p>
-                            <p>Por Apenas <strong>12x</strong></p>
-                            <div>
-                                <span class="medio">R$</span>
-                                <span class="grande">22</span>
-                                <span class="medio">,79</span>
-                            </div>
-                        </div>
-                        <span class="avista">Ou <strong>R$227,00</strong> à Vísta</span>
-                        <div class="cto">
-                            <a href="#" class="btn">COMPRAR AGORA!</a>
-                        </div>
-                        <p class="frete">
-                            <img src="img/entrega.png" alt=" icon frete"> FRETE GRATIS PARA TODO BRASIL
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="wq-04-item wq-black">
-                        <div class="wq-04-item-header">
-                            <h2>COMPRE 5 POTES</h2>
-                            <h3>TRATAMENTO PARA 5 MÊSES</h3>
-                        </div>
-                        <figure>
-                            <img src="img/kit5.png" alt="" title="">
-                            <figcaption>
-                                <h5>30%</h5>
-                                <h6>OFF</h6>
-                            </figcaption>
-                        </figure>
-                        <div class="valor">
-                            <p>DE <span>R$497,00</span></p>
-                            <p>Por Apenas <strong>12x</strong></p>
-                            <div>
-                                <span class="medio">R$</span>
-                                <span class="grande">34</span>
-                                <span class="medio">,84</span>
-                            </div>
-                        </div>
-                        <span class="avista">Ou <strong>R$347,00</strong> à Vísta</span>
-                        <div class="cto">
-                            <a href="#" class="btn">COMPRAR AGORA!</a>
-                        </div>
-                        <p class="frete">
-                            <img src="img/entrega.png" alt=" icon frete"> FRETE GRATIS PARA TODO BRASIL
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php } ?>
+
+    <?php if(get_post_meta( $id_page, 'wsg_pontos_chave_show', true )){ ?>
+        <section class="wq-02">
+            <div class="container">
+                <div class="cto">
+                    <div class="title-01">
+                        <?php echo wpautop(get_post_meta( $id_page, 'wsg_pontos_chave_titulo', true )); ?>
+                        <?php echo wpautop(get_post_meta( $id_page, 'wsg_pontos_chave_desc', true )); ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php $pontos_chave_items = get_post_meta( $id_page, "pontos_chave_items", true );
+                        if( $pontos_chave_items ){
+                            foreach( $pontos_chave_items as $key => $entry ){ ?>
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="wq-02-item">
+                                    <figure><?php getImageThumb( $entry['wsg_pontos_chave_items_img_id'], "255x255"); ?></figure>
+                                    <h3><?php echo $entry['wsg_pontos_chave_items_titulo']; ?></h3>
+                                    <?php echo wpautop($entry['wsg_pontos_chave_items_texto']); ?>
+                                </div>
+                            </div>
+                    <?php }} ?>
+                    
+                </div>
+            </div>
+        </section>
+    <?php } ?>
+
+    <?php if(get_post_meta( $id_page, 'wsg_componentes_show', true )){ ?>
+        <section class="wq-03">
+            <div class="container">
+                <div class="title-01 cto">
+                    <?php echo wpautop(get_post_meta( $id_page, 'wsg_componentes_titulo', true )); ?>
+                    <hr>
+                </div>
+
+                <div class="row">
+                    <?php $componentes_items = get_post_meta( $id_page, "componentes_items", true );
+                        if( $componentes_items ){
+                            foreach( $componentes_items as $key => $entry ){ ?>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="wq-03-item">
+                                    <figure><?php getImageThumb( $entry['wsg_componentes_items_img_id'], "85x85"); ?></figure>
+                                    <h3><?php echo $entry['wsg_componentes_items_titulo']; ?></h3>
+                                    <?php echo wpautop($entry['wsg_componentes_items_texto']); ?>
+                                </div>
+                            </div>
+                    <?php }} ?>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
+
+
+    <?php if(get_post_meta( $id_page, 'wsg_produtos_show', true )){ ?>
+        <section class="wq-04">
+            <div class="container">
+                <div class="title-01 cto">
+                    <?php echo wpautop(get_post_meta( $id_page, 'wsg_produtos_titulo', true )); ?>
+                    <?php echo wpautop(get_post_meta( $id_page, 'wsg_produtos_desc', true )); ?>
+                </div>
+
+                <div class="row">
+                    <?php $wsg_produtos_na_home = get_post_meta( $id_page, "wsg_produtos_na_home", true );
+                        if( $wsg_produtos_na_home ){
+                            foreach( $wsg_produtos_na_home as $attached_post ){
+                            $post = get_post($attached_post); ?>
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="wq-04-item <?php echo get_post_meta( $post->ID, 'wsg_produtos_item_principal', true ) ? 'wq-black' : ''; ?>">
+                                    <div class="wq-04-item-header">
+                                        <h2><?php echo get_the_title( $post->ID ); ?></h2>
+                                        <?php echo wpautop(get_post_meta( $post->ID, 'wsg_produtos_item_resumo', true )); ?>
+                                    </div>
+                                    <figure>
+                                        <?php getImageThumb( get_post_meta( $post->ID, 'wsg_produtos_item_img_id', true ), "225x176"); ?>
+                                        <figcaption>
+                                            <?php echo wpautop(get_post_meta( $post->ID, 'wsg_produtos_item_desconto', true )); ?>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="valor">
+                                        <?php echo wpautop(get_post_meta( $post->ID, 'wsg_produtos_item_de_valor', true )); ?>
+                                        <?php echo wpautop(get_post_meta( $post->ID, 'wsg_produtos_item_por_valor', true )); ?>
+                                        <div>
+                                            <span class="medio"><?php echo get_post_meta( $post->ID, 'wsg_produtos_item_parcelas', true ); ?></span>
+                                            <span class="grande"><?php echo get_post_meta( $post->ID, 'wsg_produtos_item_reais', true ); ?></span>
+                                            <span class="medio"><?php echo get_post_meta( $post->ID, 'wsg_produtos_item_centavos', true ); ?></span>
+                                        </div>
+                                    </div>
+                                    <span class="avista"><?php echo wpautop(get_post_meta( $post->ID, 'wsg_produtos_item_a_vista', true )); ?></span>
+                                    
+                                    <?php if($wsg_produtos_item_btn_texto = get_post_meta( $post->ID, 'wsg_produtos_item_btn_texto', true )){ ?>
+                                        <div class="cto">
+                                            <a href="<?php echo get_post_meta( $post->ID, 'wsg_produtos_item_btn_link', true ); ?>" class="btn"><?php echo $wsg_produtos_item_btn_texto; ?></a>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php if($wsg_produtos_item_envio_info = get_post_meta( $post->ID, 'wsg_produtos_item_envio_info', true )){ ?>
+                                        <p class="frete">
+                                            <img src="<?php bloginfo( 'template_url' ); ?>/img/entrega.png" alt="icon frete"> 
+                                            <?php echo $wsg_produtos_item_envio_info ?>
+                                        </p>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                    <?php }} ?>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
 
     <section class="wq-05">
         <div class="container">

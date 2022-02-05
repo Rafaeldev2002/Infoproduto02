@@ -140,92 +140,71 @@
 
 
 		// Metabox Carrossel Resultados
-		$carrossel_resultados = new_cmb2_box( array(
-			'id'            => 'carrossel_resultados',
-			'title'         => __( 'Carrossel Resultados' ),
+		$introducao = new_cmb2_box( array(
+			'id'            => 'introducao',
+			'title'         => __( 'Introdução ao Produto' ),
 			'object_types'  => array( 'page', ),
 			'context'       => 'normal',
 			'priority'      => 'high',
 			'show_names'    => true,
 			'closed'        => true,
 		) );
-		$carrossel_resultados->add_field( array(
+		$introducao->add_field( array(
 			'name'       => __( 'Mostrar essa seção?' ),
-			'id'         => 'wsg_carrossel_resultados_show',
+			'id'         => 'wsg_introducao_show',
 			'type'       => 'checkbox',
 		) );
-		$carrossel_resultados->add_field( array(
+		$introducao->add_field( array(
 			'name'       => __( 'Título da Seção' ),
-			'id'         => 'wsg_carrossel_resultados_titulo',
-			'type'       => 'text',
+			'id'         => 'wsg_introducao_titulo',
+			'type'       => 'wysiwyg',
 		) );
-		$carrossel_resultados->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_carrossel_resultados_titulo_after',
-			'type'       => 'text',
-		) );
-		$carrossel_resultados->add_field( array(
+		$introducao->add_field( array(
 			'name'       => __( 'Texto' ),
-			'id'         => 'wsg_carrossel_resultados_texto',
+			'id'         => 'wsg_introducao_texto',
+			'type'       => 'wysiwyg',
+		) );
+		$introducao->add_field( array(
+			'name'       => __( 'Checklist' ),
+			'id'         => 'wsg_introducao_checklist',
+			'type'       => 'text',
+			'repeatable' => true
+		) );
+		$introducao->add_field( array(
+			'name'       => __( 'Texto abaixo da checklist' ),
+			'id'         => 'wsg_introducao_texto_pos_checklist',
 			'type'       => 'wysiwyg',
 		) );
 
-		$carrossel_resultados->add_field( array(
-			'name'       => __( 'Imagens do Carrossel' ),
-			'desc'       => __( 'Tamanho recomendado <strong>840x735</strong>' ),
-			'id'         => 'wsg_carrossel_resultados_imgs',
-			'type' => 'file_list',
+		$introducao->add_field( array(
+			'name'       => __( 'Imagens ao lado' ),
+			'desc'       => __( 'Tamanho recomendado <strong>445x734</strong>' ),
+			'id'         => 'wsg_introducao_img',
+			'type' => 'file',
+			'preview_size' => 'medium',
+			'query_args' => array( 'type' => 'image' ),
+		) );
+		$introducao->add_field( array(
+			'name'       => __( 'Texto do botão' ),
+			'id'         => 'wsg_introducao_btn_texto',
+			'type'       => 'text',
+		) );
+		$introducao->add_field( array(
+			'name'       => __( 'Link do botão' ),
+			'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
+			'id'         => 'wsg_introducao_btn_link',
+			'type'       => 'text',
+		) );
+		$introducao->add_field( array(
+			'name'       => __( 'Selos de Segurança' ),
+			'desc'       => __( 'Tamanho recomendado <strong>300x43</strong>' ),
+			'id'         => 'wsg_introducao_selos_seguranca_img',
+			'type' => 'file',
 			'preview_size' => 'medium',
 			'query_args' => array( 'type' => 'image' ),
 		) );
 
-		// Metabox Benefícios
-		$beneficios = new_cmb2_box( array(
-			'id'            => 'beneficios',
-			'title'         => __( 'Benefícios' ),
-			'object_types'  => array( 'page', ),
-			'context'       => 'normal',
-			'priority'      => 'high',
-			'show_names'    => true,
-			'closed'        => true,
-		) );
-		$beneficios->add_field( array(
-			'name'       => __( 'Mostrar essa seção?' ),
-			'id'         => 'wsg_beneficios_show',
-			'type'       => 'checkbox',
-		) );
 
-		$beneficios->add_field( array(
-			'name'       => __( 'Título da seção' ),
-			'id'         => 'wsg_beneficios_titulo',
-			'type'       => 'text',
-		) );
-		$beneficios->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_beneficios_titulo_after',
-			'type'       => 'text',
-		) );
-		$beneficios->add_field( array(
-			'name'       => __( 'Descrição da seção' ),
-			'id'         => 'wsg_beneficios_desc',
-			'type'       => 'wysiwyg',
-		) );
-		$beneficios->add_field( array(
-			'name'    => __( 'Listagem de Benefícios' ),
-			'desc'    => __( 'Arraste os itens da coluna da esquerda para a da direita para anexá-lo. <br/>Você pode reorganizar a ordem dos itens na coluna da direita arrastando e soltando.'),
-			'id'      => 'wsg_beneficios_na_home',
-			'type'    => 'custom_attached_posts',
-			'column'  => true,
-			'options' => array(
-				'show_thumbnails' => true,
-				'filter_boxes'    => true,
-				'query_args'      => array(
-					'posts_per_page' => '-1',
-					'post_type'      => 'beneficios192',
-				),
-			),
-		) );
-	
 
 		// Metabox pontos_chave
 		$pontos_chave = new_cmb2_box( array(
@@ -245,12 +224,12 @@
 		$pontos_chave->add_field( array(
 			'name'       => __( 'Título da Seção' ),
 			'id'         => 'wsg_pontos_chave_titulo',
-			'type'       => 'text',
+			'type'       => 'wysiwyg',
 		) );
 		$pontos_chave->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_pontos_chave_titulo_after',
-			'type'       => 'text',
+			'name'       => __( 'Descrição' ),
+			'id'         => 'wsg_pontos_chave_desc',
+			'type'       => 'wysiwyg',
 		) );
 
 		$pontos_chave_items = $pontos_chave->add_field( array(
@@ -267,7 +246,7 @@
 
 		$pontos_chave->add_group_field( $pontos_chave_items, array(
 			'name'       => __( 'Imagem do Ponto Chave' ),
-			'desc'       => __( 'Tamanho recomendado <strong>180x180</strong>' ),
+			'desc'       => __( 'Tamanho recomendado <strong>255x255</strong>' ),
 			'id'         => 'wsg_pontos_chave_items_img',
 			'type' => 'file',
 			'preview_size' => 'medium',
@@ -284,6 +263,115 @@
 			'id'         => 'wsg_pontos_chave_items_texto',
 			'type'       => 'wysiwyg',
 		) );
+
+
+
+		// Metabox Componentes
+		$componentes = new_cmb2_box( array(
+			'id'            => 'componentes',
+			'title'         => __( 'Componentes' ),
+			'object_types'  => array( 'page', ),
+			'context'       => 'normal',
+			'priority'      => 'high',
+			'show_names'    => true,
+			'closed'        => true,
+		) );
+		$componentes->add_field( array(
+			'name'       => __( 'Mostrar essa seção?' ),
+			'id'         => 'wsg_componentes_show',
+			'type'       => 'checkbox',
+		) );
+
+		$componentes->add_field( array(
+			'name'       => __( 'Título da seção' ),
+			'id'         => 'wsg_componentes_titulo',
+			'type'       => 'text',
+		) );
+		$componentes_items = $componentes->add_field( array(
+			'id'            => 'componentes_items',
+			'type'          => 'group',
+			'options'       => array(
+				'group_title'   => __( 'Item {#}' ),
+				'add_button'    => __( 'Adicionar Outro Item' ),
+				'remove_button' => __( 'Remover Item' ),
+				'sortable'      => true,
+				'closed'        => true,
+			),
+		) );
+
+		$componentes->add_group_field( $componentes_items, array(
+			'name'       => __( 'Imagem do Ponto Chave' ),
+			'desc'       => __( 'Tamanho recomendado <strong>85x85</strong>' ),
+			'id'         => 'wsg_componentes_items_img',
+			'type' => 'file',
+			'preview_size' => 'medium',
+			'query_args' => array( 'type' => 'image' ),
+		) );
+
+		$componentes->add_group_field( $componentes_items, array(
+			'name'       => __( 'Titulo do Ponto Chave' ),
+			'id'         => 'wsg_componentes_items_titulo',
+			'type'       => 'text',
+		) );
+		$componentes->add_group_field( $componentes_items, array(
+			'name'       => __( 'Texto do Ponto Chave' ),
+			'id'         => 'wsg_componentes_items_texto',
+			'type'       => 'wysiwyg',
+		) );
+
+
+			
+		// Metabox Produtos
+		$produtos = new_cmb2_box( array(
+			'id'            => 'produtos',
+			'title'         => __( 'Produtos' ),
+			'object_types'  => array( 'page', ),
+			'context'       => 'normal',
+			'priority'      => 'high',
+			'show_names'    => true,
+			'closed'        => true,
+		) );
+		$produtos->add_field( array(
+			'name'       => __( 'Mostrar essa seção?' ),
+			'id'         => 'wsg_produtos_show',
+			'type'       => 'checkbox',
+		) );
+
+		$produtos->add_field( array(
+			'name'       => __( 'Título da seção' ),
+			'id'         => 'wsg_produtos_titulo',
+			'type'       => 'wysiwyg',
+		) );
+
+		$produtos->add_field( array(
+			'name'       => __( 'Descrição da seção' ),
+			'id'         => 'wsg_produtos_desc',
+			'type'       => 'wysiwyg',
+		) );
+		$produtos->add_field( array(
+			'name'    => __( 'Listagem de Produtos' ),
+			'desc'    => __( 'Arraste os itens da coluna da esquerda para a da direita para anexá-lo. <br/>Você pode reorganizar a ordem dos itens na coluna da direita arrastando e soltando.'),
+			'id'      => 'wsg_produtos_na_home',
+			'type'    => 'custom_attached_posts',
+			'column'  => true,
+			'options' => array(
+				'show_thumbnails' => true,
+				'filter_boxes'    => true,
+				'query_args'      => array(
+					'posts_per_page' => '-1',
+					'post_type'      => 'produtos192',
+				),
+			),
+		) );
+		$produtos->add_field( array(
+			'name'       => __( 'Selos de Segurança' ),
+			'desc'       => __( 'Tamanho recomendado <strong>540x67</strong>' ),
+			'id'         => 'wsg_produtos_selos_seguranca_img',
+			'type' => 'file',
+			'preview_size' => 'medium',
+			'query_args' => array( 'type' => 'image' ),
+		) );
+
 
 
 		// Metabox Comparação
@@ -367,63 +455,7 @@
 		) );
 
 
-		
-		// Metabox Produtos
-		$produtos = new_cmb2_box( array(
-			'id'            => 'produtos',
-			'title'         => __( 'Produtos' ),
-			'object_types'  => array( 'page', ),
-			'context'       => 'normal',
-			'priority'      => 'high',
-			'show_names'    => true,
-			'closed'        => true,
-		) );
-		$produtos->add_field( array(
-			'name'       => __( 'Mostrar essa seção?' ),
-			'id'         => 'wsg_produtos_show',
-			'type'       => 'checkbox',
-		) );
-
-		$produtos->add_field( array(
-			'name'       => __( 'Título da seção' ),
-			'id'         => 'wsg_produtos_titulo',
-			'type'       => 'text',
-		) );
-		$produtos->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_produtos_titulo_after',
-			'type'       => 'text',
-		) );
-
-		$produtos->add_field( array(
-			'name'       => __( 'Descrição da seção' ),
-			'id'         => 'wsg_produtos_desc',
-			'type'       => 'wysiwyg',
-		) );
-		$produtos->add_field( array(
-			'name'    => __( 'Listagem de Benefícios' ),
-			'desc'    => __( 'Arraste os itens da coluna da esquerda para a da direita para anexá-lo. <br/>Você pode reorganizar a ordem dos itens na coluna da direita arrastando e soltando.'),
-			'id'      => 'wsg_produtos_na_home',
-			'type'    => 'custom_attached_posts',
-			'column'  => true,
-			'options' => array(
-				'show_thumbnails' => true,
-				'filter_boxes'    => true,
-				'query_args'      => array(
-					'posts_per_page' => '-1',
-					'post_type'      => 'produtos192',
-				),
-			),
-		) );
-		$produtos->add_field( array(
-			'name'       => __( 'Selos de Segurança' ),
-			'desc'       => __( 'Tamanho recomendado <strong>540x67</strong>' ),
-			'id'         => 'wsg_produtos_selos_seguranca_img',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
-
+	
 
 		// Metabox faq
 		$faq = new_cmb2_box( array(

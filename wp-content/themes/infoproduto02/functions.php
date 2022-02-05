@@ -87,33 +87,33 @@
 			)
 		);
 
-		// Contatos
-		register_post_type('contatos',
-			array(
-				'labels' 			=> array(
-					'name' 			=> __('Contatos'),
-					'singular_name' => __('contato')
-				),
-				'public' 			=> true,
-				'has_archive' 		=> true,
-				'menu_icon' 		=> 'dashicons-phone',
-				'supports' 			=> array('title'),
-			)
-		);
+		// // Contatos
+		// register_post_type('contatos',
+		// 	array(
+		// 		'labels' 			=> array(
+		// 			'name' 			=> __('Contatos'),
+		// 			'singular_name' => __('contato')
+		// 		),
+		// 		'public' 			=> true,
+		// 		'has_archive' 		=> true,
+		// 		'menu_icon' 		=> 'dashicons-phone',
+		// 		'supports' 			=> array('title'),
+		// 	)
+		// );
 
-		// Redes sociais
-		register_post_type('redes_sociais',
-			array(
-				'labels' 			=> array(
-					'name' 			=> __('Redes sociais'),
-					'singular_name' => __('contato')
-				),
-				'public' 			=> true,
-				'has_archive' 		=> true,
-				'menu_icon' 		=> 'dashicons-share',
-				'supports' 			=> array('title', 'page-attributes'),
-			)
-		);
+		// // Redes sociais
+		// register_post_type('redes_sociais',
+		// 	array(
+		// 		'labels' 			=> array(
+		// 			'name' 			=> __('Redes sociais'),
+		// 			'singular_name' => __('contato')
+		// 		),
+		// 		'public' 			=> true,
+		// 		'has_archive' 		=> true,
+		// 		'menu_icon' 		=> 'dashicons-share',
+		// 		'supports' 			=> array('title', 'page-attributes'),
+		// 	)
+		// );
 
 	}
 	add_action('init', 'posts_types_default');
