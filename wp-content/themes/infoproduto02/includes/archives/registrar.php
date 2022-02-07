@@ -21,6 +21,23 @@
 			)
 		);
 
+		// Depoimentos
+		register_post_type('depoimentos192',
+			array(
+				'labels' 			=> array(
+					'name' 			=> __('Depoimentos'),
+					'singular_name'	=> _x('Depoimento', 'post type singular name'),
+					'add_new'		=> _x('Novo Depoimento', 'portfolio item'),
+					'add_new_item'	=> _x('Adicionar novo Depoimento', 'portfolio item'),
+					'edit_item'		=> _x('Editar Depoimento', 'portfolio item'),
+				),
+				'rewrite' 			=> array('slug' => 'depoimentos'),
+				'public' 			=> true,
+				'has_archive' 		=> true,
+				'menu_icon' 		=> 'dashicons-products',
+				'supports' 			=> array('title', 'page-attributes'),
+			)
+		);
 		
 		// Representantes
 		register_post_type('representantes192',

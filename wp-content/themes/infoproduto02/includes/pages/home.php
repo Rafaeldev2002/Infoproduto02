@@ -74,7 +74,7 @@
 		) );
 
 		$banner->add_group_field( $banner_esq_items, array(
-			'name'       => __( 'Imagem do Ponto Chave' ),
+			'name'       => __( 'Imagem do Item' ),
 			'desc'       => __( 'Tamanho recomendado <strong>30x30</strong>' ),
 			'id'         => 'wsg_banner_esq_items_img',
 			'type' => 'file',
@@ -104,7 +104,7 @@
 
 		// Direita
 		$banner->add_group_field( $banner_dir_items, array(
-			'name'       => __( 'Imagem do Ponto Chave' ),
+			'name'       => __( 'Imagem do Item' ),
 			'desc'       => __( 'Tamanho recomendado <strong>30x30</strong>' ),
 			'id'         => 'wsg_banner_dir_items_img',
 			'type' => 'file',
@@ -125,7 +125,7 @@
 		) );
 		$banner->add_field( array(
 			'name'       => __( 'Link do botão' ),
-			'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
+			// 'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
 			'id'         => 'wsg_banner_btn_link',
 			'type'       => 'text',
 		) );
@@ -191,7 +191,7 @@
 		) );
 		$introducao->add_field( array(
 			'name'       => __( 'Link do botão' ),
-			'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
+			// 'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
 			'id'         => 'wsg_introducao_btn_link',
 			'type'       => 'text',
 		) );
@@ -300,7 +300,7 @@
 		) );
 
 		$componentes->add_group_field( $componentes_items, array(
-			'name'       => __( 'Imagem do Ponto Chave' ),
+			'name'       => __( 'Imagem do Componente' ),
 			'desc'       => __( 'Tamanho recomendado <strong>85x85</strong>' ),
 			'id'         => 'wsg_componentes_items_img',
 			'type' => 'file',
@@ -309,12 +309,12 @@
 		) );
 
 		$componentes->add_group_field( $componentes_items, array(
-			'name'       => __( 'Titulo do Ponto Chave' ),
+			'name'       => __( 'Titulo do Componente' ),
 			'id'         => 'wsg_componentes_items_titulo',
 			'type'       => 'text',
 		) );
 		$componentes->add_group_field( $componentes_items, array(
-			'name'       => __( 'Texto do Ponto Chave' ),
+			'name'       => __( 'Texto do Componente' ),
 			'id'         => 'wsg_componentes_items_texto',
 			'type'       => 'wysiwyg',
 		) );
@@ -372,90 +372,259 @@
 			'query_args' => array( 'type' => 'image' ),
 		) );
 
-
-
-		// Metabox Comparação
-		$comparacao = new_cmb2_box( array(
-			'id'            => 'comparacao',
-			'title'         => __( 'Comparação' ),
+		// Metabox Depoimentos
+		$depoimentos = new_cmb2_box( array(
+			'id'            => 'depoimentos',
+			'title'         => __( 'Mais Informações' ),
 			'object_types'  => array( 'page', ),
 			'context'       => 'normal',
 			'priority'      => 'high',
 			'show_names'    => true,
 			'closed'        => true,
 		) );
-		$comparacao->add_field( array(
+		$depoimentos->add_field( array(
 			'name'       => __( 'Mostrar essa seção?' ),
-			'id'         => 'wsg_comparacao_show',
+			'id'         => 'wsg_depoimentos_show',
 			'type'       => 'checkbox',
 		) );
-		$comparacao->add_field( array(
+		$depoimentos->add_field( array(
 			'name'       => __( 'Título da Seção' ),
-			'id'         => 'wsg_comparacao_titulo',
-			'type'       => 'text',
-		) );
-		$comparacao->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_comparacao_titulo_after',
-			'type'       => 'text',
-		) );
-		$comparacao->add_field( array(
-			'name'       => __( 'Texto' ),
-			'id'         => 'wsg_comparacao_texto',
+			'id'         => 'wsg_depoimentos_titulo',
 			'type'       => 'wysiwyg',
 		) );
-			
-		$comparacao->add_field( array(
-			'name'       => __( 'Listagem de Benefícios ao lado' ),
-			'id'         => 'wsg_comparacao_beneficios',
-			'type'       => 'text',
-			'repeatable' => true
+		$depoimentos->add_field( array(
+			'name'       => __( 'Texto' ),
+			'id'         => 'wsg_depoimentos_texto',
+			'type'       => 'wysiwyg',
+		) );
+		$depoimentos->add_field( array(
+			'name'    => __( 'Listagem de Depoimentos DESTAQUE' ),
+			'desc'    => __( 'Arraste os itens da coluna da esquerda para a da direita para anexá-lo. <br/>Você pode reorganizar a ordem dos itens na coluna da direita arrastando e soltando.'),
+			'id'      => 'wsg_depoimentos_destaque_na_home',
+			'type'    => 'custom_attached_posts',
+			'column'  => true,
+			'options' => array(
+				'show_thumbnails' => true,
+				'filter_boxes'    => true,
+				'query_args'      => array(
+					'posts_per_page' => '-1',
+					'post_type'      => 'depoimentos192',
+				),
+			),
 		) );
 
-		$comparacao->add_field( array(
-			'name'       => __( 'Texto do Botão' ),
-			'id'         => 'wsg_comparacao_btn_texto',
+		$depoimentos->add_field( array(
+			'name'    => __( 'Listagem de Depoimentos NORMAIS' ),
+			'desc'    => __( 'Arraste os itens da coluna da esquerda para a da direita para anexá-lo. <br/>Você pode reorganizar a ordem dos itens na coluna da direita arrastando e soltando.'),
+			'id'      => 'wsg_depoimentos_normais_na_home',
+			'type'    => 'custom_attached_posts',
+			'column'  => true,
+			'options' => array(
+				'show_thumbnails' => true,
+				'filter_boxes'    => true,
+				'query_args'      => array(
+					'posts_per_page' => '-1',
+					'post_type'      => 'depoimentos192',
+				),
+			),
+		) );
+
+		
+		$depoimentos->add_field( array(
+			'name'       => __( 'Texto do botão' ),
+			'id'         => 'wsg_depoimentos_btn_texto',
 			'type'       => 'text',
 		) );
-		$comparacao->add_field( array(
-			'name'       => __( 'Link do Botão' ),
-			'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
-			'id'         => 'wsg_comparacao_btn_link',
+		$depoimentos->add_field( array(
+			'name'       => __( 'Link do botão' ),
+			// 'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
+			'id'         => 'wsg_depoimentos_btn_link',
 			'type'       => 'text',
 		) );
-		$comparacao->add_field( array(
-			'name'       => __( 'Texto abaixo do botão com ícone de segurança' ),
-			'id'         => 'wsg_comparacao_pos_btn',
-			'type'       => 'text',
-		) );
-		$comparacao->add_field( array(
+		$depoimentos->add_field( array(
 			'name'       => __( 'Selos de Segurança' ),
-			'desc'       => __( 'Tamanho recomendado <strong>540x67</strong>' ),
-			'id'         => 'wsg_comparacao_selos_seguranca_img',
+			'desc'       => __( 'Tamanho recomendado <strong>300x43</strong>' ),
+			'id'         => 'wsg_depoimentos_selos_seguranca_img',
+			'type' => 'file',
+			'preview_size' => 'medium',
+			'query_args' => array( 'type' => 'image' ),
+		) );
+			
+
+
+		// Metabox Mais Informações
+		$mais_informacoes = new_cmb2_box( array(
+			'id'            => 'mais_informacoes',
+			'title'         => __( 'Mais Informações' ),
+			'object_types'  => array( 'page', ),
+			'context'       => 'normal',
+			'priority'      => 'high',
+			'show_names'    => true,
+			'closed'        => true,
+		) );
+		$mais_informacoes->add_field( array(
+			'name'       => __( 'Mostrar essa seção?' ),
+			'id'         => 'wsg_mais_informacoes_show',
+			'type'       => 'checkbox',
+		) );
+		$mais_informacoes->add_field( array(
+			'name'       => __( 'Título da Seção' ),
+			'id'         => 'wsg_mais_informacoes_titulo',
+			'type'       => 'text',
+		) );
+		$mais_informacoes->add_field( array(
+			'name'       => __( 'Texto' ),
+			'id'         => 'wsg_mais_informacoes_texto',
+			'type'       => 'wysiwyg',
+		) );
+		$mais_informacoes->add_field( array(
+			'name'       => __( 'Imagem' ),
+			'desc'       => __( 'Tamanho recomendado <strong>350x546</strong>' ),
+			'id'         => 'wsg_mais_informacoes_img',
+			'type' => 'file',
+			'preview_size' => 'medium',
+			'query_args' => array( 'type' => 'image' ),
+		) );
+			
+
+		
+		// Metabox Demonstração
+		$demonstracao = new_cmb2_box( array(
+			'id'            => 'demonstracao',
+			'title'         => __( 'Demonstração' ),
+			'object_types'  => array( 'page', ),
+			'context'       => 'normal',
+			'priority'      => 'high',
+			'show_names'    => true,
+			'closed'        => true,
+		) );
+		$demonstracao->add_field( array(
+			'name'       => __( 'Mostrar essa seção?' ),
+			'id'         => 'wsg_demonstracao_show',
+			'type'       => 'checkbox',
+		) );
+
+		$demonstracao_items = $demonstracao->add_field( array(
+			'id'            => 'demonstracao_items',
+			'type'          => 'group',
+			'options'       => array(
+				'group_title'   => __( 'Especificação {#}' ),
+				'add_button'    => __( 'Adicionar Outro Especificação' ),
+				'remove_button' => __( 'Remover Especificação' ),
+				'sortable'      => true,
+				'closed'        => true,
+			),
+		) );
+		$demonstracao->add_group_field( $demonstracao_items, array(
+			'name'       => __( 'Imagem do Item' ),
+			'desc'       => __( 'Tamanho recomendado <strong>100x95</strong>' ),
+			'id'         => 'wsg_demonstracao_items_img',
+			'type' => 'file',
+			'preview_size' => 'medium',
+			'query_args' => array( 'type' => 'image' ),
+		) );
+		$demonstracao->add_group_field( $demonstracao_items, array(
+			'name'       => __( 'Texto do Item' ),
+			'id'         => 'wsg_demonstracao_items_texto',
+			'type'       => 'wysiwyg',
+		) );
+		$demonstracao->add_field( array(
+			'name'       => __( 'Imagem em Destaque da Seção' ),
+			'desc'       => __( 'Tamanho recomendado <strong>540x495</strong>' ),
+			'id'         => 'wsg_demonstracao_destaque_img',
 			'type' => 'file',
 			'preview_size' => 'medium',
 			'query_args' => array( 'type' => 'image' ),
 		) );
 
-		$comparacao->add_field( array(
-			'name'       => __( 'Imagem Antes' ),
-			'desc'       => __( 'Tamanho recomendado <strong>540x646</strong>' ),
-			'id'         => 'wsg_comparacao_img_antes',
+		$demonstracao->add_field( array(
+			'name'       => __( 'Texto ao lado' ),
+			'id'         => 'wsg_demonstracao_texto_title',
+			'type'       => 'title',
+		) );
+		$demonstracao->add_field( array(
+			'name'       => __( 'Título da Seção' ),
+			'id'         => 'wsg_demonstracao_titulo',
+			'type'       => 'wysiwyg',
+		) );
+		$demonstracao->add_field( array(
+			'name'       => __( 'Texto' ),
+			'id'         => 'wsg_demonstracao_texto',
+			'type'       => 'wysiwyg',
+		) );
+		
+
+		
+		// Metabox Comparação
+		$garantia = new_cmb2_box( array(
+			'id'            => 'garantia',
+			'title'         => __( 'Garantia' ),
+			'object_types'  => array( 'page', ),
+			'context'       => 'normal',
+			'priority'      => 'high',
+			'show_names'    => true,
+			'closed'        => true,
+		) );
+		$garantia->add_field( array(
+			'name'       => __( 'Mostrar essa seção?' ),
+			'id'         => 'wsg_garantia_show',
+			'type'       => 'checkbox',
+		) );
+		$garantia->add_field( array(
+			'name'       => __( 'Título da Seção' ),
+			'id'         => 'wsg_garantia_titulo',
+			'type'       => 'text',
+		) );
+		$garantia->add_field( array(
+			'name'       => __( 'Subtítulo' ),
+			'id'         => 'wsg_garantia_titulo_after',
+			'type'       => 'text',
+		) );
+		$garantia_items = $garantia->add_field( array(
+			'id'            => 'garantia_items',
+			'type'          => 'group',
+			'options'       => array(
+				'group_title'   => __( 'Garantia {#}' ),
+				'add_button'    => __( 'Adicionar Outro Garantia' ),
+				'remove_button' => __( 'Remover Garantia' ),
+				'sortable'      => true,
+				'closed'        => true,
+			),
+		) );
+		$garantia->add_group_field( $garantia_items, array(
+			'name'       => __( 'Imagem do Item' ),
+			'desc'       => __( 'Tamanho recomendado <strong>255x55</strong>' ),
+			'id'         => 'wsg_garantia_items_img',
 			'type' => 'file',
 			'preview_size' => 'medium',
 			'query_args' => array( 'type' => 'image' ),
 		) );
-		$comparacao->add_field( array(
-			'name'       => __( 'Imagem Depois' ),
-			'desc'       => __( 'Tamanho recomendado <strong>540x646</strong>' ),
-			'id'         => 'wsg_comparacao_img_depois',
+		$garantia->add_group_field( $garantia_items, array(
+			'name'       => __( 'Texto do Item' ),
+			'id'         => 'wsg_garantia_items_texto',
+			'type'       => 'wysiwyg',
+		) );
+
+		$garantia->add_field( array(
+			'name'       => __( 'Texto do botão' ),
+			'id'         => 'wsg_garantia_btn_texto',
+			'type'       => 'text',
+		) );
+		$garantia->add_field( array(
+			'name'       => __( 'Link do botão' ),
+			// 'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
+			'id'         => 'wsg_garantia_btn_link',
+			'type'       => 'text',
+		) );
+		$garantia->add_field( array(
+			'name'       => __( 'Selos de Segurança' ),
+			'desc'       => __( 'Tamanho recomendado <strong>300x43</strong>' ),
+			'id'         => 'wsg_garantia_selos_seguranca_img',
 			'type' => 'file',
 			'preview_size' => 'medium',
 			'query_args' => array( 'type' => 'image' ),
 		) );
 
-
-	
 
 		// Metabox faq
 		$faq = new_cmb2_box( array(
@@ -478,18 +647,14 @@
 			'type'       => 'text',
 		) );
 		$faq->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_faq_titulo_after',
+			'name'       => __( 'Subtítulo' ),
+			'id'         => 'wsg_faq_subtitulo',
 			'type'       => 'text',
 		) );
-		$faq->add_field( array(
-			'name'       => __( 'Descrição da Seção' ),
-			'id'         => 'wsg_faq_desc',
-			'type'       => 'wysiwyg',
-		) );
 
-		$faq_items = $faq->add_field( array(
-			'id'            => 'faq_items',
+		$faq_items_esq = $faq->add_field( array(
+			'id'            => 'faq_items_esq',
+			'name'			=> 'Perguntas à esquerda',
 			'type'          => 'group',
 			'options'       => array(
 				'group_title'   => __( 'Pergunta {#}' ),
@@ -499,197 +664,73 @@
 				'closed'        => true,
 			),
 		) );
-		$faq->add_group_field( $faq_items, array(
+		$faq->add_group_field( $faq_items_esq, array(
 			'name'       => __( 'Pergunta' ),
-			'id'         => 'wsg_faq_items_pergunta',
+			'id'         => 'wsg_faq_items_esq_pergunta',
 			'type'       => 'text',
 		) );
-		$faq->add_group_field( $faq_items, array(
+		$faq->add_group_field( $faq_items_esq, array(
 			'name'       => __( 'Resposta' ),
-			'id'         => 'wsg_faq_items_resposta',
+			'id'         => 'wsg_faq_items_esq_resposta',
 			'type'       => 'wysiwyg',
 		) );
 
-		// Imagens ao lado do FAQ
-		$faq->add_field( array(
-			'name'       => __( 'Imagens ao lado' ),
-			'id'         => 'wsg_faq_imagens_title',
-			'type'       => 'title',
-		) );
-		$faq->add_field( array(
-			'name'       => __( 'Imagem em destaque ao lado' ),
-			'desc'       => __( 'Tamanho recomendado <strong>190x320</strong>' ),
-			'id'         => 'wsg_faq_items_destaque_img',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
-		$faq->add_field( array(
-			'name'       => __( 'Imagem objeto flutuante ao fundo' ),
-			'desc'       => __( 'Tamanho recomendado <strong>64x64</strong>' ),
-			'id'         => 'wsg_faq_items_flutuante_img',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
-		$faq->add_field( array(
-			'name'       => __( 'Imagem objeto flutuante em destaque' ),
-			'desc'       => __( 'Tamanho recomendado <strong>170x170</strong>' ),
-			'id'         => 'wsg_faq_items_flutuante_destaque_img',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
-		$faq->add_field( array(
-			'name'       => __( 'Imagem de fundo abaixo' ),
-			'desc'       => __( 'Tamanho recomendado <strong>640x480</strong>' ),
-			'id'         => 'wsg_faq_items_abaixo_img',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
-	
-	
-
-		// Metabox Comparação
-		$garantia = new_cmb2_box( array(
-			'id'            => 'garantia',
-			'title'         => __( 'Garantia' ),
-			'object_types'  => array( 'page', ),
-			'context'       => 'normal',
-			'priority'      => 'high',
-			'show_names'    => true,
-			'closed'        => true,
-		) );
-		$garantia->add_field( array(
-			'name'       => __( 'Mostrar essa seção?' ),
-			'id'         => 'wsg_garantia_show',
-			'type'       => 'checkbox',
-		) );
-		$garantia->add_field( array(
-			'name'       => __( 'Título da Seção' ),
-			'id'         => 'wsg_garantia_titulo',
-			'type'       => 'text',
-		) );
-		$garantia->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_garantia_titulo_after',
-			'type'       => 'text',
-		) );
-		$garantia->add_field( array(
-			'name'       => __( 'Texto da seção' ),
-			'id'         => 'wsg_garantia_texto',
-			'type'       => 'wysiwyg',
-		) );
-
-		$garantia->add_field( array(
-			'name'       => __( 'Imagem ao lado' ),
-			'desc'       => __( 'Tamanho recomendado <strong>435x305</strong>' ),
-			'id'         => 'wsg_garantia_img',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
-
-		// Metabox Comparação
-		$contato = new_cmb2_box( array(
-			'id'            => 'contato',
-			'title'         => __( 'Contato' ),
-			'object_types'  => array( 'page', ),
-			'context'       => 'normal',
-			'priority'      => 'high',
-			'show_names'    => true,
-			'closed'        => true,
-		) );
-		$contato->add_field( array(
-			'name'       => __( 'Mostrar essa seção?' ),
-			'id'         => 'wsg_contato_show',
-			'type'       => 'checkbox',
-		) );
-		$contato->add_field( array(
-			'name'       => __( 'Título da Seção' ),
-			'id'         => 'wsg_contato_titulo',
-			'type'       => 'text',
-		) );
-		$contato->add_field( array(
-			'name'       => __( 'Texto por trás do título' ),
-			'id'         => 'wsg_contato_titulo_after',
-			'type'       => 'text',
-		) );
-		$contato->add_field( array(
-			'name'       => __( 'Descrição' ),
-			'id'         => 'wsg_contato_desc',
-			'type'       => 'wysiwyg',
-		) );
-
-		$contato_items = $contato->add_field( array(
-			'id'            => 'contato_items',
+		$faq_items_dir = $faq->add_field( array(
+			'id'            => 'faq_items_dir',
+			'name'			=> 'Perguntas à Direita',
 			'type'          => 'group',
 			'options'       => array(
-				'group_title'   => __( 'Contato {#}' ),
-				'add_button'    => __( 'Adicionar Outro Contato' ),
-				'remove_button' => __( 'Remover Contato' ),
+				'group_title'   => __( 'Pergunta {#}' ),
+				'add_button'    => __( 'Adicionar Outro Pergunta' ),
+				'remove_button' => __( 'Remover Pergunta' ),
 				'sortable'      => true,
 				'closed'        => true,
 			),
 		) );
-		$contato->add_group_field( $contato_items, array(
-			'name'       => __( 'Ícone do Contato' ),
-			'id'         => 'wsg_contato_items_icone',
-			'desc'         => 'Tamanho recomendado <strong>70x70</strong>',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
-		$contato->add_group_field( $contato_items, array(
-			'name'       => __( 'Título do Contato' ),
-			'id'         => 'wsg_contato_items_titulo',
+		$faq->add_group_field( $faq_items_dir, array(
+			'name'       => __( 'Pergunta' ),
+			'id'         => 'wsg_faq_items_dir_pergunta',
 			'type'       => 'text',
 		) );
-		$contato->add_group_field( $contato_items, array(
-			'name'       => __( 'Texto do Contato' ),
-			'id'         => 'wsg_contato_items_texto',
+		$faq->add_group_field( $faq_items_dir, array(
+			'name'       => __( 'Resposta' ),
+			'id'         => 'wsg_faq_items_dir_resposta',
 			'type'       => 'wysiwyg',
 		) );
 
-
-		$contato->add_field( array(
-			'name'       => __( 'Formas de Pagamento' ),
-			'id'         => 'wsg_contato_formas_pagamento_title',
-			'type'       => 'title',
+		// Metabox Call to Action Rodapé
+		$cta_footer = new_cmb2_box( array(
+			'id'            => 'cta_footer',
+			'title'         => __( 'Call to Action Rodapé' ),
+			'object_types'  => array( 'page', ),
+			'context'       => 'normal',
+			'priority'      => 'high',
+			'show_names'    => true,
+			'closed'        => true,
 		) );
-		$contato->add_field( array(
-			'name'       => __( 'Título' ),
-			'id'         => 'wsg_contato_formas_pagamento_titulo',
+		$cta_footer->add_field( array(
+			'name'       => __( 'Mostrar essa seção?' ),
+			'id'         => 'wsg_cta_footer_show',
+			'type'       => 'checkbox',
+		) );
+		$cta_footer->add_field( array(
+			'name'       => __( 'Título da Seção' ),
+			'id'         => 'wsg_cta_footer_titulo',
 			'type'       => 'text',
 		) );
-		$contato->add_field( array(
-			'name'       => __( 'Imagem das formas de pagamento' ),
-			'desc'       => __( 'Tamanho recomendado <strong>450x170</strong>' ),
-			'id'         => 'wsg_contato_formas_pagamento_img',
+		$cta_footer->add_field( array(
+			'name'       => __( 'Título da Seção' ),
+			'id'         => 'wsg_cta_footer_texto',
+			'type'       => 'wysiwyg',
+		) );
+		$cta_footer->add_field( array(
+			'name'       => __( 'Selos de Segurança' ),
+			'desc'       => __( 'Tamanho recomendado <strong>350x350</strong>' ),
+			'id'         => 'wsg_cta_footer_img',
 			'type' => 'file',
 			'preview_size' => 'medium',
 			'query_args' => array( 'type' => 'image' ),
 		) );
-
-		$contato->add_field( array(
-			'name'       => __( 'Texto do Botão' ),
-			'id'         => 'wsg_contato_btn_texto',
-			'type'       => 'text',
-		) );
-		$contato->add_field( array(
-			'name'       => __( 'Link do Botão' ),
-			'desc'		 => ('Se quiser que a página desça até a seção do produto, insira <strong>"#compraragora"</strong>'),
-			'id'         => 'wsg_contato_btn_link',
-			'type'       => 'text',
-		) );
-		$contato->add_field( array(
-			'name'       => __( 'Texto abaixo do botão' ),
-			'desc'		 => __( 'Ex: "Compra segura"' ),
-			'id'         => 'wsg_contato_texto_pos_btn',
-			'type'       => 'text',
-		) );
-
 
 
 		// Metabox Rodapé
