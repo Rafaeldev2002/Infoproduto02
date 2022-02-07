@@ -34,7 +34,7 @@
 				'rewrite' 			=> array('slug' => 'depoimentos'),
 				'public' 			=> true,
 				'has_archive' 		=> true,
-				'menu_icon' 		=> 'dashicons-products',
+				'menu_icon' 		=> 'dashicons-testimonial',
 				'supports' 			=> array('title', 'page-attributes'),
 			)
 		);

@@ -285,7 +285,7 @@
 		$componentes->add_field( array(
 			'name'       => __( 'Título da seção' ),
 			'id'         => 'wsg_componentes_titulo',
-			'type'       => 'text',
+			'type'       => 'wysiwyg',
 		) );
 		$componentes_items = $componentes->add_field( array(
 			'id'            => 'componentes_items',
@@ -363,19 +363,11 @@
 				),
 			),
 		) );
-		$produtos->add_field( array(
-			'name'       => __( 'Selos de Segurança' ),
-			'desc'       => __( 'Tamanho recomendado <strong>540x67</strong>' ),
-			'id'         => 'wsg_produtos_selos_seguranca_img',
-			'type' => 'file',
-			'preview_size' => 'medium',
-			'query_args' => array( 'type' => 'image' ),
-		) );
 
 		// Metabox Depoimentos
 		$depoimentos = new_cmb2_box( array(
 			'id'            => 'depoimentos',
-			'title'         => __( 'Mais Informações' ),
+			'title'         => __( 'Depoimentos' ),
 			'object_types'  => array( 'page', ),
 			'context'       => 'normal',
 			'priority'      => 'high',
@@ -573,7 +565,7 @@
 		$garantia->add_field( array(
 			'name'       => __( 'Título da Seção' ),
 			'id'         => 'wsg_garantia_titulo',
-			'type'       => 'text',
+			'type'       => 'wysiwyg',
 		) );
 		$garantia->add_field( array(
 			'name'       => __( 'Subtítulo' ),

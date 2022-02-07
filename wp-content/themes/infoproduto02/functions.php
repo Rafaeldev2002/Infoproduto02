@@ -214,21 +214,21 @@
 	include 'includes/functions.php';
 	include 'includes/thumbs.php';
 	include 'includes/icons.php';
-	//include 'includes/removed-itens.php';
+	include 'includes/removed-itens.php';
 
 
-	// $role = get_role( 'wsg_agency' );
-	// $role = get_role( 'wsg_super_admin' );
-	// $role->add_cap( 'edit_published_adminpanel_s' );
-	// $role->add_cap( 'publish_adminpanel' );
-	// $role->add_cap( 'delete_published_adminpanel_s' );
-	// $role->add_cap( 'edit_adminpanel' );
-	// $role->add_cap( 'delete_adminpanel_s' );
-	// $role->add_cap( 'edit_others_adminpanel' );
-	// $role->add_cap( 'delete_others_adminpanel_s' );
-	// $role->add_cap( 'delete_private_adminpanel_s' );
-	// $role->add_cap( 'edit_private_adminpanel_s' );
-	// $role->add_cap( 'read_private_adminpanel' );
+	$role = get_role( 'wsg_agency' );
+	$role = get_role( 'wsg_super_admin' );
+	$role->add_cap( 'edit_published_adminpanel_s' );
+	$role->add_cap( 'publish_adminpanel' );
+	$role->add_cap( 'delete_published_adminpanel_s' );
+	$role->add_cap( 'edit_adminpanel' );
+	$role->add_cap( 'delete_adminpanel_s' );
+	$role->add_cap( 'edit_others_adminpanel' );
+	$role->add_cap( 'delete_others_adminpanel_s' );
+	$role->add_cap( 'delete_private_adminpanel_s' );
+	$role->add_cap( 'edit_private_adminpanel_s' );
+	$role->add_cap( 'read_private_adminpanel' );
 
 
 ?>

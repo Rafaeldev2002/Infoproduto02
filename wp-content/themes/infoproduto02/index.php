@@ -290,7 +290,7 @@
                                 <?php }} ?>
                             </div>
 
-                            <figure><?php getImageThumb( $entry['wsg_demonstracao_destaque_img_id'], ""); ?></figure>
+                            <figure><?php getImageThumb( get_post_meta( $id_page,'wsg_demonstracao_destaque_img_id', true), "540x495"); ?></figure>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -331,7 +331,7 @@
                         <a href="<?php echo get_post_meta( $id_page, 'wsg_introducao_btn_link', true ); ?>" class="btn"> <?php echo $wsg_introducao_btn_texto; ?></a>
                     <?php } ?>
                     <figure class="selos-de-compra">
-                        <?php getImageThumb( get_post_meta( $id_page, 'wsg_introducao_selos_seguranca_img', true ), "300x43"); ?>
+                        <?php getImageThumb( get_post_meta( $id_page, 'wsg_introducao_selos_seguranca_img_id', true ), "300x43"); ?>
                     </figure>
                 </div>
             </div>
@@ -350,8 +350,8 @@
                 <div class="accordion row" id="accordionParent1">
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                         <?php $faq_items_esq = get_post_meta( $id_page, "faq_items_esq", true );
+                            $count = 0;
                             if( $faq_items_esq ){
-                                $count = 0;
                                 foreach( $faq_items_esq as $key => $entry ){ ?>
                                 <div class="card">
                                     <div class="card-header" id="heading<?php echo $count; ?>">
@@ -370,7 +370,6 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                         <?php $faq_items_dir = get_post_meta( $id_page, "faq_items_dir", true );
                             if( $faq_items_dir ){
-                                $count = 0;
                                 foreach( $faq_items_dir as $key => $entry ){ ?>
                                 <div class="card">
                                     <div class="card-header" id="heading<?php echo $count; ?>">

@@ -54,6 +54,7 @@
 
 	add_action( 'admin_menu', 'remover_menu_posttype', 999 );
 	function remover_menu_posttype() {
+		remove_menu_page( 'edit.php' );
 		// Postypes defaults
 		remove_submenu_page( 'edit.php?post_type=contatos', 'post-new.php?post_type=contatos' );
 		remove_submenu_page( 'edit.php?post_type=gerais', 'post-new.php?post_type=gerais' );

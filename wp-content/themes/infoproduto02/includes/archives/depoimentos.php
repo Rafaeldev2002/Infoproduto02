@@ -4,7 +4,7 @@
 
 	function metaboxes_depoimentos() {
 
-		// Detalhes do Produto na home
+		// Detalhes do Depoimento na home
 		$depoimentos_item = new_cmb2_box( array(
 			'id'            => 'depoimentos_item',
 			'title'         => __( 'Detalhes do Depoimento' ),
@@ -16,7 +16,7 @@
 		) );
 
         $depoimentos_item->add_field( array(
-			'name'       => __( 'Imagem do Produto' ),
+			'name'       => __( 'Imagem do Depoimento' ),
 			'desc'       => __( 'Tamanho recomendado para depoimento destaque: <strong>380x365</strong>,<br>Para depoimentos normais: <strong>255x453</strong>' ),
 			'id'         => 'wsg_depoimentos_item_img',
 			'type' => 'file',
@@ -37,7 +37,7 @@
 		) );
 
 		$depoimentos_item->add_field( array(
-			'name'       => __( 'Resumo do depoimento' ),
+			'name'       => __( 'Texto do depoimento' ),
 			'id'         => 'wsg_depoimentos_item_depoimento',
 			'type'       => 'wysiwyg',
 		) );
